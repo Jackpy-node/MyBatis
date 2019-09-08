@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS t_user;
+CREATE TABLE t_user
+(
+    id        char(32) NOT NULL comment '用户号' primary key ,
+    user_name varchar(32) DEFAULT NULL comment '登录用户',
+    password  varchar(32) DEFAULT NULL comment '登录密码',
+    name      varchar(32) DEFAULT NULL comment '用户姓名',
+    age       int(10)     DEFAULT NULL comment '年龄',
+    sex       int(2)      DEFAULT NULL comment '性别',
+    birthday  date        DEFAULT NULL comment '生日',
+    created   datetime    DEFAULT NULL comment '创建时间',
+    updated   datetime    DEFAULT NULL comment '维护时间'
+) comment '用户信息表';
